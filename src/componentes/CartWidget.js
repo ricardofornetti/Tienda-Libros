@@ -9,7 +9,7 @@ const CartWidget = () => {
         <>
         <img className='imagenCarrito' src={cartIcon} alt="imagen carrito"/>       
         <span className=" numberCarrito translate-middle badge rounded-pill bg-danger">
-            4+
+            99+
             <span class="visually-hidden">unread messages</span>
         </span> 
         </>
