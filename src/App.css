@@ -80,3 +80,58 @@
   width: 100%;
   height: 500px;
 }
+
+
+.btnComprar{
+  margin-left: 10px;
+}
+
+
+.imagenAdd{
+  margin-left: 50px;
+  height: 30px;
+}
+
+.imagenRemove{
+  margin-left: 40px;
+  height: 30px;
+}
+
+
+/*Item*/
+
+.imagenLibro{
+  width: 100%;
+  height: 20px;  
+}
+
+
+.card-title{
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.card-precio{
+  color: black;
+  font-size: 30px;
+}
+
+.card-reseña{
+  font-size: 15px;
+}
+
+
+
+/*ItemCount*/
+/*
+.btn-group{
+  margin-left: 50px;
+  margin-bottom: 10px;
+  
+}
+*/
+
+/*ItemListContainer*/
+.saludo{
+  text-align: center;
+}
