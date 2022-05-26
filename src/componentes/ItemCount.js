@@ -3,33 +3,40 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ItemCount = ({stock}) => {
-  const[contador, setContador]=useState(0)
+  const[contador, setContador]=useState(0) // agrego un estado que setea el estado inicial
 
   //SUMAR PRODUCTOS AL CARRITO
   const sumarProdructo = () =>{
-    if(contador < stock){
+    if(contador < stock){           //funcion donde se va incrementando el estado inicial y no superara el stock
       setContador(contador + 1)
     }
   }
 
   //RESTAR PRODUCTOS AL CARRITO
 
-  const restarProducto = () =>{
+  const restarProducto = () =>{    // se va restando 1 
     if(contador > 0){
       setContador(contador - 1)
     }
   }
 
+
+  const onAdd = () => {
+
+    alert("AGREGASTE : " + contador + "UNIDADES AL CARRITO");
+
+}
+
   return (
 
     <div>
-    <div className="btn-group" role="group" aria-label="Basic outlined example">
-      <button onClick={restarProducto} type="button" className="btn btn-primary">-</button>
-      <button type="button" className="btn btn-primary">{contador}</button>            
-      <button onClick={sumarProdructo} type="button" className="btn btn-primary">+</button>
-      
+    
+      <button onClick={restarProducto} type="button btnRestar" className="btn btn-primary">-</button>
+      <button type="button" className="btn btn-primary btnContador">{contador}</button>            
+      <button onClick={sumarProdructo} type="button btnSumar" className="btn btn-primary">+</button>
+      <button type="button" className="btn btn-secondary btnComprar" onClick={onAdd}>Comprar</button>
     </div>
-    </div>    
+        
   );
 }
 

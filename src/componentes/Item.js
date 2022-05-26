@@ -37,7 +37,7 @@ const Item = ({producto}) => {
         <h5 className="card-title">{name}</h5>
         <p className="card-autor">Autor : {autor}</p>
         <p className="card-text">Cant:<ItemCount stock={stock} /></p>
-        <p className="card-precio">{precio} <button type="button" className="btn btn-secondary btnComprar">Comprar</button></p>
+        <p className="card-precio">{precio} </p>
         <p className="card-text">ISBN:{isbn}</p>
         <p className="card-text"><small className="text-reseña">{description}</small></p>
         <p className="card-text">Editorial: {Editorial}</p>        
