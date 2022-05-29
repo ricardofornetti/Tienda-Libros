@@ -40,7 +40,7 @@
 
 .imagenLogo{
   width: 120%;
-  height: 70px;
+  height: 50px;
   margin-left: 1px;
 
 }
@@ -68,7 +68,7 @@
 
 .imagenCarrito{
   width: 5%;
-  height: 40px;
+  height: 30px;
 }
 
 .numberCarrito{
@@ -85,9 +85,6 @@
   margin-left: 3px;
   margin-right: 3px;
 }
-
-
-
 
 .btnComprar{
   margin-left: 10px;
@@ -113,21 +110,58 @@
 }
 
 
-.card-title{
+.card-titulo{
   text-transform: uppercase;
   font-size: 30px;
+  font-size:large;
+  text-align:left;
+}
+
+.card-textIsbn{
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-textEditorial{
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-precio{
+  list-style: none;
   color: black;
   font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
+.card-textItemCount{
+  list-style: none;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-textStock{
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  
+}
 .card-reseña{
   font-size: 15px;
 }
 
-
+.card-text{
+  list-style: none;
+}
 
 /*ItemCount*/
 /*

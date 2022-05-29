@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logoLibreria from '../imagenes/logoLibreria.png';
-import libreria from '../imagenes/libreria.jpg';
 import CartWidget from './CartWidget';
 
 
@@ -40,7 +39,6 @@ const Navbar = () => {
                   <input className="form-control me-2" type="search" placeholder="Titulo, Autor, ISBN" aria-label="Search"/>
                   <button className="btn btn-outline-dark" type="submit">Buscar</button>
                 </form>
-
               </ul>              
             </div>
             <CartWidget/>
@@ -50,9 +48,7 @@ const Navbar = () => {
           </div>          
         </nav>
     </div>
-    <div>
-    <img className="imagenCentral" src={libreria} alt="logo Libreria"></img>
-    </div>
+    
   </>
   /*Cierro Fragment */
     );
