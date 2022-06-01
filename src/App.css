@@ -37,6 +37,7 @@
   }
 }
 
+/*NavBar*/
 
 .imagenLogo{
   width: 120%;
@@ -45,14 +46,18 @@
 
 }
 
+
+
 .navbar .container-fluid .navbar-nav {
-  margin-block-end: auto;
+  margin-left: auto;
+  
 }
 .navbar .container-fluid .navbar-nav .nav-link {
   color: black;
   text-transform: uppercase;
   margin-right: 30px;
   margin-left: 30px;
+  text-decoration: none;
 }
 
 .navbar .container-fluid .navbar-nav .nav-link:hover {
@@ -61,9 +66,11 @@
   background-color: white;
 }
 
-.form-control{
-  margin-left: 100px;
+.linkImg{
+  text-decoration: none;
 }
+
+
 
 
 .imagenCarrito{
@@ -115,6 +122,14 @@
   font-size: 30px;
   font-size:large;
   text-align:left;
+}
+
+.card-textAutor{
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-textIsbn{
