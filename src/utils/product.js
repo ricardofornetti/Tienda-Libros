@@ -31,7 +31,7 @@ const productos =[
     descripcion:"La última parte del viaje de Frodo y SamLos ejércitos del Señor Oscuro van extendiendo cada vez más su maléfica sombra por la Tierra Media. Hombres, elfos y enanos unen sus fuerzas para presentar batalla a Sauron y sus huestes. Ajenos a estos preparativos, Frodo y Sam siguen adentrándose en el país de Mordor en su heroico viaje para destruir el Anillo de Poder en las Grietas.", 
     img:'/img/ElRetornoDelRey.jpg',
     precio:"$ 2.987,32",
-    category:'03',
+    category:'01',
     stock:32
     },
 
@@ -103,9 +103,47 @@ const productos =[
     descripcion:"Ambientada en una ciudad costera de la Riviera Italiana; la película de Disney y Pixar; Luca; cuenta la historia de un chico y un verano inolvidable lleno de descubrimientos. Luca comparte gelato; pasta y viajes en motocicleta acompañado de su nuevo mejor amigo; hasta que la diversión se ve amenazada por el secreto que ocultan: que son monstruos provenientes de un mundo escondido bajo el mar.", 
     img:'/img/Luca.png',
     precio:"$ 2.440,00",
-    category:'01',
+    category:'03',
     stock:20
     },
+
+    {id:'10', 
+    titulo:'La vida es bella',  
+    autor:"Roberto Benigni",
+    editorial:"Miramax",
+    isbn:"12345678910111213",
+    descripcion:"En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo, en la Toscana, con la intención de abrir una librería. Allí conoce a la encantadora Dora y, a pesar de que es la prometida del fascista Rodolfo, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.", 
+    img:'/img/LaVidaEsBella.webp',
+    precio:"$ 1.895,00",
+    category:'03',
+    stock:11
+    },
+
+    {id:'11', 
+    titulo:'Chip & Dale: Al rescate',  
+    autor:"Tad Stones",
+    editorial:"Disney Pixar",
+    isbn:"12345678910111213",
+    descripcion:"Chip y Dale, dos ardillas con olfato para los problemas abren una agencia de detectives, Rescue Rangers, junto a sus nuevos amigos Gadget, Monterey Jack y Zipper. El grupo decide resolver casos y crímenes ofrecidos por sus clientes (normalmente animales antropomorfos) los cuales la policía encuentran los casos demasiado pequeños como para ocuparse.",
+    img:'/img/Chip&Dale.jpeg',
+    precio:"$ 2.000,00",
+    category:'03',
+    stock:11
+    },
+
+    {id:'12', 
+    titulo:'90 minutos al cielo',  
+    autor:"Michael Polish",
+    editorial:"Disney Pixar",
+    isbn:"12345678910111213",
+    descripcion:"ras un aparatoso accidente en el que es arrollado por un camión, dan por muerto a Don Piper. 90 minutos después del accidente, mientras un pastor rezaba por él, Piper regresó milagrosamente a la vida. ¿Qué pasó durante esos 90 minutos?.",
+    img:'/img/90MinCielo.jpg',
+    precio:"$ 2.500,00",
+    category:'03',
+    stock:11
+    },
+
+
 ]
 
 

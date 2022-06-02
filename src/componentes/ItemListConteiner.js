@@ -17,19 +17,10 @@ const ItemListConteiner = ({saludo}) => {
   useEffect(()=>{
     setCargando(true)
     getData
-
-    //if (id === undefined) return prod;
-    //return prod.category == (id)
-    
-    .then((res) => setListaProductos(res.filter((prod) => prod.category == (id))))
+    .then((res) => id ? setListaProductos(res.filter((prod) => prod.category == id)):setListaProductos(res))
     .catch((error) => console.log(error))
     .finally(()=> setCargando(false))
   }, [id])
-
-
-  
-
-
 
   return (
     <>

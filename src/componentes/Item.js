@@ -22,8 +22,8 @@ const Item = ({producto}) => {
             <li className="card-textAutor">autor: {autor}</li>
             <li className="card-textIsbn">isbn: {isbn}</li>
             <li className="card-textEditorial">Editorial: {editorial}</li>          
-            <li li className="card-precio">{precio} </li>          
-            <li className="card-textItemCount"><ItemCount stock={stock} /></li>
+            {/*<li li className="card-precio">{precio} </li> */}          
+            {/*<li className="card-textItemCount"><ItemCount stock={stock} /></li>*/}
             <li className="card-textStock">Stock: {stock} unidades</li>
           </ul>
         </div>
