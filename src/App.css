@@ -117,16 +117,17 @@
 }
 
 
-.card-titulo{
+.card-textTitulo{
   text-transform: uppercase;
-  font-size: 30px;
-  font-size:large;
+  font-size: 15px;
+  font-size: medium;  
   text-align:left;
 }
 
 .card-textAutor{
   list-style: none;
   text-transform: uppercase;
+  font-size: 12px;
   color: black;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -135,6 +136,7 @@
 .card-textIsbn{
   list-style: none;
   text-transform: uppercase;
+  font-size: 12px;
   color: black;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -143,6 +145,7 @@
 .card-textEditorial{
   list-style: none;
   text-transform: uppercase;
+  font-size: 12px;
   color: black;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -166,6 +169,7 @@
 .card-textStock{
   list-style: none;
   text-transform: uppercase;
+  font-size: 12px;
   color: black;
   margin-top: 5px;
   
@@ -187,7 +191,76 @@
 }
 */
 
-/*ItemListContainer*/
-.saludo{
-  text-align: center;
+
+
+
+
+/*ItemDetail*/
+
+.card-textTituloDetail{
+  text-transform: uppercase;  
+  font-size:xx-large;  
+  text-align:left;
 }
+
+.textReseña{
+  font-size:large; 
+}
+
+.card-textAutorDetail{
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card-textIsbnDetail{
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-textEditorialDetail{
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-precioDetail{
+  list-style: none;
+  color: black;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-textItemCountDetail{
+  list-style: none;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.card-textStockDetail{
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  margin-top: 30px;
+  
+}
+
+
+/*
+.btnChekOut{
+  margin-left: 30px;
+}
+*/

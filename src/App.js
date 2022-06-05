@@ -2,10 +2,10 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './componentes/Navbar';
-import CartWidget from './componentes/CartWidget';
 import ItemListConteiner from './componentes/ItemListConteiner';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './componentes/Cart';
+
 
 
 
@@ -20,6 +20,7 @@ const App = () => {
           <Route path='/'element={<ItemListConteiner/>}/>
           <Route path='/category/:id' element={<ItemListConteiner/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/cart' element={<Cart/>}/>
         </Routes>
       
         

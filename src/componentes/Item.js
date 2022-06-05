@@ -8,16 +8,16 @@ const Item = ({producto}) => {
 
     return (
       <>
-      <div className="card mb-3" style={{width:'18rem', margin:'.5rem'}}>
+      <div className="card mb-3" style={{width:'16rem'}}>
         <Link to={`/item/${id}`}>
           <img src={img} className="imagenLibro img-fluid rounded-start" alt="imagen libro"/>
         </Link>
         <div className="card-body">
           <Link to={`/item/${id}`}style={{textDecoration:'none'}}>
-            <h5 className="card-titulo">{titulo}</h5>
+            <h5 className="card-textTitulo">{titulo}</h5>
           </Link>
           
-          <div className="card-text"><small className="text-reseña">{descripcion}</small></div>
+          {/*<div className="card-text"><small className="text-reseña">{descripcion}</small></div>*/}
           <ul className="list-group list-group-flush">
             <li className="card-textAutor">autor: {autor}</li>
             <li className="card-textIsbn">isbn: {isbn}</li>
@@ -28,7 +28,6 @@ const Item = ({producto}) => {
           </ul>
         </div>
       </div>
-
       </>
 );
 }
