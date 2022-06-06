@@ -49,7 +49,7 @@ const Navbar = () => {
                 </form>
               </ul>              
             </div>
-            <CartWidget/>
+            <CartWidget/> 
           </div>          
           <div>
             

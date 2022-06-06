@@ -40,7 +40,7 @@ const productos =[
     autor: "Boyne John",
     editorial:"Salamandra",
     isbn:"1234567",
-    descripcion:"La acción se narra desde el punto de vista de Bruno, el hijo de ocho años 4​ de un militar de alto rango nazi. Él y su familia se ven obligados a abandonar Berlín cuando a su padre lo destinan para trabajar en el campo de concentración de Auschwitz. La familia acepta el cambio pero no de buen grado. El joven desde la ventana de su habitación puede ver personas que visten “pijamas de rayas”.", 
+    descripcion:"La acción se narra desde el punto de vista de Bruno, el hijo de ocho años de un militar de alto rango nazi. Él y su familia se ven obligados a abandonar Berlín cuando a su padre lo destinan para trabajar en el campo de concentración de Auschwitz. La familia acepta el cambio pero no de buen grado. El joven desde la ventana de su habitación puede ver personas que visten “pijamas de rayas”.", 
     img:'/img/niñoPiyamarayas.jpg',
     precio:"$ 3.099,56",
     category:'01',

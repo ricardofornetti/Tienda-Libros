@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
 import cartIcon from 'bootstrap-icons/icons/cart3.svg'
 
 const CartWidget = () => {
+    
+      
+    
+    
     return (
-
     /* Fragment */
         <>
         <img className='imagenCarrito' src={cartIcon} alt="imagen carrito"/>       

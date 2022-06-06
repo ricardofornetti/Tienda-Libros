@@ -1,41 +1,46 @@
-import React from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
-import ItemList from './ItemList';
-import { getData } from '../utils/product';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import ItemList from "./ItemList";
+import { getData } from "../utils/product";
+import { useParams } from "react-router-dom";
 
+const ItemListConteiner = ({ saludo }) => {
+  const [listaProductos, setListaProductos] = useState([]);
+  const [cargando, setCargando] = useState(false);
+  const { id } = useParams();
 
-
-const ItemListConteiner = ({saludo}) => {
-
-  const [listaProductos, setListaProductos]=useState([])
-  const [cargando, setCargando] = useState(false)
-  const {id} = useParams();
-
-
-  useEffect(()=>{
-    setCargando(true)
+  useEffect(() => {
+    setCargando(true);
     getData
-    .then((res) => id ? setListaProductos(res.filter((prod) => prod.category == id)):setListaProductos(res))
-    .catch((error) => console.log(error))
-    .finally(()=> setCargando(false))
-  }, [id])
+      .then((res) =>
+        id
+          ? setListaProductos(res.filter((prod) => prod.category == id))
+          : setListaProductos(res)
+      )
+      .catch((error) => console.log(error))
+      .finally(() => setCargando(false));
+  }, [id]);
 
   return (
     <>
       <div>
-        <h3 className='saludo'>{saludo}</h3>
-        {cargando ? 
+        <h3 className="saludo">{saludo}</h3>
+        {cargando ? (
           <button className="btn btn-dark" type="button" disabled>
-          <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-          Cargando...
-        </button> : <ItemList listaProductos={listaProductos}/>}
+            <span
+              className="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            Cargando...
+          </button>
+        ) : (
+          <ItemList listaProductos={listaProductos} />
+        )}
       </div>
     </>
   );
-}
+};
 
 export default ItemListConteiner;
-
-
