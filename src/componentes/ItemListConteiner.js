@@ -15,7 +15,7 @@ const ItemListConteiner = ({ saludo }) => {
     getData
       .then((res) =>
         id
-          ? setListaProductos(res.filter((prod) => prod.category == id))
+          ? setListaProductos(res.filter((prod) => prod.category === parseInt(id)))
           : setListaProductos(res)
       )
       .catch((error) => console.log(error))

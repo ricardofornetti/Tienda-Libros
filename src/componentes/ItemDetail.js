@@ -1,19 +1,31 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
-import { CartContext } from "./CartContext";
+import { useCart } from "../context/CartContext";
+
 
 const ItemDetail = ({ item }) => {
-  const test = useContext(CartContext);
+  const {id, titulo, autor, img, precio, stock} = item
+  const [contador, setContador] = useState(0);
+  const [itemCount, setItemCount] = useState(false);
 
-  const [itemCount, setItemCount] = useState(0);
+  const {addToCart} = useCart()
 
-  const onAdd = (cantidad) => {
-    alert("AGREGASTE : " + cantidad + " UNIDADES AL CARRITO");
-    setItemCount(cantidad);
+  const onAdd = () => {
+    const itemCart ={
+      id,
+      titulo,
+      autor,
+      img,
+      precio,
+      stock,
+      cantidad : contador
+    }
+    alert("AGREGASTE : " + contador + " UNIDADES AL CARRITO");
+    setItemCount(true);
 
     // agrego el producto seleccionado al carrito
-    test.addItem(item, cantidad);
+    addToCart(itemCart);
   };
 
   return (
@@ -36,32 +48,23 @@ const ItemDetail = ({ item }) => {
               <ul className="list-group list-group-flush">
                 <li className="card-textAutorDetail">autor: {item.autor}</li>
                 <li className="card-textIsbnDetail">isbn: {item.isbn}</li>
-                <li className="card-textEditorialDetail">
-                  Editorial: {item.editorial}
-                </li>
-                <li li className="card-precioDetail">
-                  {item.precio}{" "}
-                </li>
-                {/*<li className="card-textItemCount"><ItemCount stock={item.stock} /></li> */}
-                {itemCount === 0 ? (
+                <li className="card-textEditorialDetail">Editorial: {item.editorial}</li>
+                <li li className="card-precioDetail">${item.precio}</li>
+                
+                {!itemCount ? (
                   <ItemCount
                     stock={item.stock}
                     onAdd={onAdd}
                     initial={itemCount}
+                    contador={contador}
+                    setContador={setContador}
                   />
                 ) : (
                   <Link to="/cart">
-                    <button
-                      type="button"
-                      className="btn btn-secondary btnChekOut"
-                    >
-                      CheckOut
-                    </button>
+                    <button type="button" className="btn btn-secondary btnChekOut">CheckOut</button>
                   </Link>
                 )}
-                <li className="card-textStockDetail">
-                  Stock: {item.stock} unidades
-                </li>
+                <li className="card-textStockDetail">Stock: {item.stock} unidades</li>
               </ul>
             </div>
           </div>

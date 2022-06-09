@@ -15,7 +15,6 @@ const Navbar = () => {
               <Link to ='/' className='linkImg'> {/*Linkeo al brand */}
               <img className="imagenLogo" src={logoLibreria} alt="logo Libreria"></img>
               </Link>
-              
             </a>
             <button
               className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,21 +29,21 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link to='/category/01'style={{textDecoration:'none'}}>
-                    <a className="nav-link active" href="#">libros</a>
+                    <a className="nav-link active" >libros</a>
                   </Link>  
                 </li>
                 <li className="nav-item">
                   <Link to='/category/02'style={{textDecoration:'none'}}>
-                  <a className="nav-link active" href="#">musica</a>
+                  <a className="nav-link active" >musica</a>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to='/category/03'style={{textDecoration:'none'}}>
-                    <a className="nav-link active" href="#">peliculas</a>
+                    <a className="nav-link active" >peliculas</a>
                   </Link>
                 </li>
                 <form className="d-flex" role="search">
-                  <input onClick={() => alert('click del imput')} className="form-control me-2 formBuscar" type="search" placeholder="Titulo, Autor, ISBN" aria-label="Search"/>
+                  <input className="form-control me-2 formBuscar" type="search" placeholder="Titulo, Autor, ISBN" aria-label="Search"/>
                   <button className="btn btn-outline-dark btnBuscar">Buscar</button>
                 </form>
               </ul>              

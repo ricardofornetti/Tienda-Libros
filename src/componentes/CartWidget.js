@@ -1,19 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cartIcon from 'bootstrap-icons/icons/cart3.svg'
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-    
-      
-    
-    
+
     return (
     /* Fragment */
         <>
-        <img className='imagenCarrito' src={cartIcon} alt="imagen carrito"/>       
+        <Link to='/cart'>
+        <img className='imagenCarrito' src={cartIcon} alt="imagen carrito"></img>
+        </Link>       
         <span className=" numberCarrito translate-middle badge rounded-pill bg-danger">
             85+
-            <span class="visually-hidden">unread messages</span>
-        </span> 
+            <span className="visually-hidden">unread messages</span>
+        </span>
+        
         </>
   /*Cierro Fragment */
     );

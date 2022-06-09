@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const ItemCount = ({ stock, onAdd }) => {
-  const [contador, setContador] = useState(0); // agrego un estado que setea el estado inicial
-
+const ItemCount = ({ stock, onAdd, contador, setContador }) => {
+  
   //SUMAR PRODUCTOS AL CARRITO
   const sumarProdructo = () => {
     if (contador < stock) {
@@ -21,13 +20,7 @@ const ItemCount = ({ stock, onAdd }) => {
     }
   };
 
-  /*
-  const onAdd = () => {
-
-    alert("AGREGASTE : " + contador + " UNIDADES AL CARRITO");
-
-}
-*/
+  
   return (
     <div>
       <button
@@ -48,17 +41,9 @@ const ItemCount = ({ stock, onAdd }) => {
         +
       </button>
       {stock ? (
-        <button
-          type="button"
-          className="btn btn-secondary btnComprar"
-          onClick={() => onAdd(contador)}
-        >
-          Comprar
-        </button>
+        <button type="button" className="btn btn-secondary btnComprar" onClick={onAdd}>Comprar</button>
       ) : (
-        <button type="button" className="btn btn-secondary btnComprar">
-          Comprar
-        </button>
+        <button type="button" className="btn btn-secondary btnComprar">Comprar</button>
       )}
     </div>
   );

@@ -76,6 +76,7 @@
 .imagenCarrito{
   width: 5%;
   height: 30px;
+  text-decoration: none;
 }
 
 .numberCarrito{
@@ -83,10 +84,7 @@
 }
 
 
-.imagenCentral{
-  width: 100%;
-  height: 500px;
-}
+
 
 .btnContador{
   margin-left: 3px;
@@ -259,8 +257,11 @@
 }
 
 
-/*
-.btnChekOut{
-  margin-left: 30px;
+/*Cart*/
+
+.imagenCart{
+  width: 15%;
+  height: 5%;
+  margin-top: 1%;
+  margin-left: 1%;
 }
-*/

@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
@@ -32,13 +32,10 @@ const Item = ({ producto }) => {
             <h5 className="card-textTitulo">{titulo}</h5>
           </Link>
 
-          {/*<div className="card-text"><small className="text-reseña">{descripcion}</small></div>*/}
           <ul className="list-group list-group-flush">
             <li className="card-textAutor">autor: {autor}</li>
             <li className="card-textIsbn">isbn: {isbn}</li>
             <li className="card-textEditorial">Editorial: {editorial}</li>
-            {/*<li li className="card-precio">{precio} </li> */}
-            {/*<li className="card-textItemCount"><ItemCount stock={stock} /></li>*/}
             <li className="card-textStock">Stock: {stock} unidades</li>
           </ul>
         </div>

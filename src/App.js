@@ -5,7 +5,7 @@ import Navbar from './componentes/Navbar';
 import ItemListConteiner from './componentes/ItemListConteiner';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
-import CartContextProvider from './componentes/CartContext';
+import {CartProvider} from './context/CartContext';
 
 
 
@@ -13,7 +13,7 @@ const App = () => {
   
   return (
     
-    <CartContextProvider>
+    <CartProvider>
       <BrowserRouter>
       <Navbar/>
         <Routes >
@@ -23,18 +23,7 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
-    </CartContextProvider>
-    
-    /**
-     <>
-      <Navbar>
-      <CartWidget/> 
-      </Navbar>
-      <ItemListConteiner saludo="Hola Mundo Coder"/>
-      <ItemDetailContainer></ItemDetailContainer>
-      </>
-     */
-      
+    </CartProvider>
   );
 }
 
