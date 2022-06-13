@@ -23,8 +23,6 @@ export const CartProvider = ({ children }) => {
       setCarrito([...carrito, item])
     }
   }
-
-
   const isInCart = (id) => {
     return carrito.some(prod => prod.id === id)
   }
@@ -44,18 +42,38 @@ export const CartProvider = ({ children }) => {
     return carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
   }
 
-  // funcion precio total
-  const costoTotal = () =>{
-    return carrito.reduce((acc, prod) => acc +=prod.cantidad * prod.preio, 0)
+  // funcion precio total x item
+  const costoTotalItem = () =>{
+    return carrito.reduce((acc, prod) => acc +=prod.cantidad * prod.precio, 0)
   }
 
+  
+
+
+
+  // funcion calcular Subtotal
+  /*
+  const Subtotal = ()  =>{
+   let totalPorItem = carrito.map(item => costoTotalItem(item.id)) 
+    return totalPorItem.reduce((acc, prod) => acc + prod)
+   */
+
+
   return (
-    <CartContext.Provider value={{ carrito, addToCart, isInCart, emptyCart, remove, quantityCart, costoTotal }}>
+    <CartContext.Provider value={{ 
+      carrito, 
+      addToCart, 
+      isInCart, 
+      emptyCart, 
+      remove, 
+      quantityCart, 
+      costoTotalItem,
+  
+      }}>
       {children}
     </CartContext.Provider>
   );
 };
-
 
 export const useCart = () => useContext(CartContext)
 

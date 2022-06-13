@@ -2,25 +2,25 @@ import { useCart } from "../context/CartContext";
 
 
 const Cart = () => {
-  const {carrito, remove, emptyCart } = useCart()
+  const {carrito, remove, emptyCart, costoTotalItem} = useCart()
   
  
   return (
     <div>
       {!carrito.length ? (
-        <button>Carrito vacio</button>
+        <div>Carrito vacio</div>
       ) : (
         carrito.map((item) => 
-        
-          <div>
-          <div>Titulo: {item.titulo}</div>
-          <img className="imagenCart" src={item.img} />
-          <div>Precio: $ {item.precio}</div>
-          <div>Cantidad : {item.cantidad} unidades</div>
-          <button onClick={()=>{remove(item.id)}} type="button" class="btn btn-warning">ELIMINAR PRODUCTO</button>
-          <button onClick={()=>{emptyCart()}} type="button" class="btn btn-dark">VACIAR CARRITO</button>
+          <div key={item.id}>
+            
+            <img className="imagenCart" src={item.img} alt="imagen Producto en carrito"></img>
+            <div className="tituloCart">Producto: {item.titulo}</div>
+            <div>Precio: $ {item.precio}</div>
+            <div>Cantidad : {item.cantidad} unidades</div>
+            <button onClick={()=>{remove(item.id)}} type="button" className="btn btn-warning">ELIMINAR PRODUCTO</button>
+            <button onClick={()=>{emptyCart()}} type="button" className="btn btn-dark">VACIAR CARRITO</button>
+            <div>Costo Total: {costoTotalItem()}</div>
           </div>
-          
           )
       )}
     </div>
@@ -31,19 +31,3 @@ export default Cart;
 
 
 
-
-/*
-<div>
-      {!carrito.length ? (
-        <button>Carrito vacio</button>
-      ) : (
-        carrito.map((item) => <div ><img className="imagenCart" src={item.img} />
-<p>{item.name}</p>
-<button onClick={()=>{deleteItem(item.id)}}>borraritem</button>
-</div>)
-      )}
-    </div>
-  );
-};
-
- */

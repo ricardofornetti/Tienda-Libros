@@ -33,11 +33,7 @@ const ItemDetail = ({ item }) => {
       <div className="card mb-3 cardItemDetail" style={{ width: "68rem" }}>
         <div className="row g-0">
           <div className="col-md-4">
-            <img
-              src={item.img}
-              className="imagenLibro img-fluid rounded-start"
-              alt="imagen libro"
-            />
+            <img src={item.img} className="imagenLibro img-fluid rounded-start" alt="imagen libro"/>
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -49,7 +45,7 @@ const ItemDetail = ({ item }) => {
                 <li className="card-textAutorDetail">autor: {item.autor}</li>
                 <li className="card-textIsbnDetail">isbn: {item.isbn}</li>
                 <li className="card-textEditorialDetail">Editorial: {item.editorial}</li>
-                <li li className="card-precioDetail">${item.precio}</li>
+                <li className="card-precioDetail">$ {item.precio},00</li>
                 
                 {!itemCount ? (
                   <ItemCount

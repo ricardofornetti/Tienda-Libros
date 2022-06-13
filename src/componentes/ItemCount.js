@@ -23,25 +23,11 @@ const ItemCount = ({ stock, onAdd, contador, setContador }) => {
   
   return (
     <div>
-      <button
-        onClick={restarProducto}
-        type="button btnRestar"
-        className="btn btn-primary"
-      >
-        -
-      </button>
-      <button type="button" className="btn btn-primary btnContador">
-        {contador}
-      </button>
-      <button
-        onClick={sumarProdructo}
-        type="button btnSumar"
-        className="btn btn-primary"
-      >
-        +
-      </button>
+      <button onClick={restarProducto} type="button btnRestar" className="btn btn-primary">-</button>
+      <button type="button" className="btn btn-primary btnContador">{contador}</button>
+      <button onClick={sumarProdructo} type="button btnSumar" className="btn btn-primary">+</button>
       {stock ? (
-        <button type="button" className="btn btn-secondary btnComprar" onClick={onAdd}>Comprar</button>
+        <button type="button" className="btn btn-secondary btnComprar" onClick={onAdd}>Agregar a Carrito</button>
       ) : (
         <button type="button" className="btn btn-secondary btnComprar">Comprar</button>
       )}

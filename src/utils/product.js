@@ -30,7 +30,7 @@ const productos =[
     isbn:"123456",
     descripcion:"La última parte del viaje de Frodo y SamLos ejércitos del Señor Oscuro van extendiendo cada vez más su maléfica sombra por la Tierra Media. Hombres, elfos y enanos unen sus fuerzas para presentar batalla a Sauron y sus huestes. Ajenos a estos preparativos, Frodo y Sam siguen adentrándose en el país de Mordor en su heroico viaje para destruir el Anillo de Poder en las Grietas.", 
     img:'/img/libros/ElRetornoDelRey.jpg',
-    precio:2987.32,
+    precio:2987,
     category:1,
     stock:32
     },
@@ -42,7 +42,7 @@ const productos =[
     isbn:"1234567",
     descripcion:"La acción se narra desde el punto de vista de Bruno, el hijo de ocho años de un militar de alto rango nazi. Él y su familia se ven obligados a abandonar Berlín cuando a su padre lo destinan para trabajar en el campo de concentración de Auschwitz. La familia acepta el cambio pero no de buen grado. El joven desde la ventana de su habitación puede ver personas que visten “pijamas de rayas”.", 
     img:'/img/libros/niñoPiyamarayas.jpg',
-    precio:3099.56,
+    precio:3099,
     category:1,
     stock:45
     },
