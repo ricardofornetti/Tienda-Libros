@@ -2,30 +2,42 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
-import { getData } from "../utils/product";
-import { useParams } from "react-router-dom";
 
-const ItemListConteiner = ({ saludo }) => {
+import { useParams } from "react-router-dom";
+import db from '../utils/firebaseConfig'
+import { collection, getDocs, query, where, getFirestore, orderBy } from "firebase/firestore";
+import { async } from "@firebase/util";
+
+
+const ItemListConteiner = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [cargando, setCargando] = useState(false);
-  const { id } = useParams();
-
+  const { id} = useParams();
+  
   useEffect(() => {
-    setCargando(true);
-    getData
-      .then((res) =>
-        id
-          ? setListaProductos(res.filter((prod) => prod.category === parseInt(id)))
-          : setListaProductos(res)
-      )
-      .catch((error) => console.log(error))
-      .finally(() => setCargando(false));
-  }, [id]);
+    const db = getFirestore();
+    const firebaseFetch = async () => {
+      setCargando(true);
+      const myItem = id
+        ? query(collection(db, "products"), where("category", "==", id))
+        :query(collection (db, 'products'), orderBy('titulo'))
+
+        const querySnapshot = await getDocs(myItem)
+        setListaProductos(
+            querySnapshot.docs.map((item) => {
+                return { ...item.data(), id: item.id }
+                
+            })
+        )  
+        setCargando(false)    
+      };
+    firebaseFetch ();
+  }, [IDBVersionChangeEvent]);
 
   return (
     <>
       <div>
-        <h3 className="saludo">{saludo}</h3>
+        
         {cargando ? (
           <button className="btn btn-dark" type="button" disabled>
             <span
@@ -44,3 +56,5 @@ const ItemListConteiner = ({ saludo }) => {
 };
 
 export default ItemListConteiner;
+
+

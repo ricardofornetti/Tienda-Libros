@@ -1,12 +1,16 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 const ItemCount = ({ stock, onAdd, contador, setContador }) => {
   
+  
+
+
   //SUMAR PRODUCTOS AL CARRITO
   const sumarProdructo = () => {
     if (contador < stock) {
-      //funcion donde se va incrementando el estado inicial y no superara el stock
+    //funcion donde se va incrementando el estado inicial y no superara el stock
       setContador(contador + 1);
     }
   };

@@ -33,11 +33,6 @@ const Navbar = () => {
                   </Link>  
                 </li>
                 <li className="nav-item">
-                  <Link to='/category/02'style={{textDecoration:'none'}}>
-                  <label className="nav-link active" >musica</label>
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <Link to='/category/03'style={{textDecoration:'none'}}>
                     <label className="nav-link active" >peliculas</label>
                   </Link>

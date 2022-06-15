@@ -7,14 +7,9 @@ const Item = ({ producto }) => {
   const {
     id,
     titulo,
-    //autor,
-    //isbn,
-    //editorial,
-    //descripcion,
+    
     img,
-    //precio,
-    //category,
-    //stock,
+   
   } = producto;
 
   return (
@@ -24,18 +19,8 @@ const Item = ({ producto }) => {
             <h5 className="card-textTitulo">{titulo}</h5>
           </Link>
         <Link to={`/item/${id}`}><img src={img} className="imagenLibro img-fluid rounded-start"alt="imagen libro"/></Link>
-        <div className="card-body">
-            {/*
-            <ul className="list-group list-group-flush">
-             <li className="card-textAutor">autor: {autor}</li>
-              <li className="card-textIsbn">isbn: {isbn}</li>
-              <li className="card-textEditorial">Editorial: {editorial}</li>
-              <li className="card-textStock">Stock: {stock} unidades</li>
-              </ul>
-             */
-            }
-          
-        </div>
+        
+        
       </div>
     </>
   );

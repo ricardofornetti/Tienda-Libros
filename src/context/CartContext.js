@@ -42,21 +42,25 @@ export const CartProvider = ({ children }) => {
     return carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
   }
 
-  // funcion precio total x item
+  
+
+  //funcion precio total x item
   const costoTotalItem = () =>{
     return carrito.reduce((acc, prod) => acc +=prod.cantidad * prod.precio, 0)
   }
 
+  //funcion precio por Item
+  const precioPorProducto = (id) =>{
+    const buscarEnCarrito = carrito.find((item) => item.id === id);
+    return buscarEnCarrito ? buscarEnCarrito.cantidad : 0;
+  }
+
+  
+
   
 
 
-
-  // funcion calcular Subtotal
-  /*
-  const Subtotal = ()  =>{
-   let totalPorItem = carrito.map(item => costoTotalItem(item.id)) 
-    return totalPorItem.reduce((acc, prod) => acc + prod)
-   */
+ 
 
 
   return (
@@ -68,7 +72,7 @@ export const CartProvider = ({ children }) => {
       remove, 
       quantityCart, 
       costoTotalItem,
-  
+      precioPorProducto,
       }}>
       {children}
     </CartContext.Provider>
@@ -77,4 +81,39 @@ export const CartProvider = ({ children }) => {
 
 export const useCart = () => useContext(CartContext)
 
+/*
 
+
+  const deleteById = (id) => {
+    setCartList(cartList.filter((item) => item.id !== id));
+  };
+
+  const removeOneUnit = (id) => {
+    if (unitsPerProduct(id) === 1) {
+      return deleteById(id);
+    }
+    setCartList(
+      cartList.map((product) =>
+        product.id === id
+          ? { ...product, quantity: product.quantity - 1 }
+          : product
+      )
+    );
+  };
+
+  const totalCount = () => {
+    return cartList.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const totalPrice = () => {
+    return cartList.reduce(
+      (total, item) => total + item.quantity * item.price,
+      0
+    );
+  };
+
+  const unitsPerProduct = (id) => {
+    const foundInCart = cartList.find((item) => item.id === id);
+    return foundInCart ? foundInCart.quantity : 0;
+  };
+*/

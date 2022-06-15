@@ -74,7 +74,7 @@
 
 
 .imagenCarrito{
-  width: 5%;
+  width: 200%;
   height: 30px;
   text-decoration: none;
 }
@@ -268,3 +268,15 @@
   margin-left: 1%;
 }
 
+.btnVaciarCarrito{
+  margin-top: 30px
+}
+
+
+
+/*Carrito Vacio*/
+.textCarritoVacio{
+  text-transform: uppercase;
+  text-align: center;
+  
+}
