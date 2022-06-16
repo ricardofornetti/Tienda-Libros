@@ -28,18 +28,6 @@ const ItemDetailContainer = () => {
     });
   }, [id]) ;
 
-
-
-
-
-  //useEffect(() => {
-    //setCargando(true);
-    //getData
-    //.then((res) => setProductoPuntual(res.find((prod) => prod.id === parseInt(id))))
-     // .catch((error) => console.log(error))
-     // .finally(() => setCargando(false));
-  //}, []);
-
   return (
     <>
       <div>

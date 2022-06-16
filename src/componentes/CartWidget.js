@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cartIcon from 'bootstrap-icons/icons/cart3.svg'
+import cartIcon from 'bootstrap-icons/icons/handbag-fill.svg'
 import { Link } from 'react-router-dom';
 import { useCart } from "../context/CartContext";
 

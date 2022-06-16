@@ -57,7 +57,7 @@ const ItemDetail = ({ item }) => {
                   />
                 ) : (
                   <Link to="/cart">
-                    <button type="button" className="btn btn-secondary btnChekOut">CheckOut</button>
+                    <button type="button" className="btn btn-secondary btnChekOut">Ir a Carrito</button>
                   </Link>
                 )}
                 <li className="card-textStockDetail">Stock: {item.stock} unidades</li>

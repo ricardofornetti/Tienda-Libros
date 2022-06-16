@@ -80,7 +80,8 @@
 }
 
 .numberCarrito{
-  margin-bottom: 20px;  
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -279,4 +280,14 @@
   text-transform: uppercase;
   text-align: center;
   
+}
+
+.imagenFlecha{
+  height: 35px;
+  margin-right: 1%;
+}
+
+.imagenCarritoVacio{
+  margin-left: 43%;
+  margin-top: 8%;
 }
