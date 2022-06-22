@@ -6,6 +6,7 @@ import ItemListConteiner from './componentes/ItemListConteiner';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
 import {CartProvider} from './context/CartContext';
+import FinalizarCompra from './componentes/FinalizarCompra';
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/category/:id' element={<ItemListConteiner/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/checkout' element={<FinalizarCompra/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

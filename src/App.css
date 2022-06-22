@@ -112,15 +112,22 @@
 
 .imagenLibro{
   width: 100%;
-  height: 20px;  
+  height: 50px;
 }
+.btnDetalles{
+  width: 100%;
+}
+
+
+
+/*
 
 
 .card-textTitulo{
   text-transform: uppercase;
   font-size: 18px;
   color: black;
-  /*font-size: medium;*/  
+  
   text-align:center;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -183,6 +190,11 @@
 .card-text{
   list-style: none;
 }
+
+*/
+
+
+
 
 /*ItemCount*/
 /*
@@ -272,22 +284,56 @@
 .btnVaciarCarrito{
   margin-top: 30px
 }
+.imagenBorrar{
+  height: 20px;
+  margin-right: 2px;
+}
+
+.btnFinalizarCompra{
+  text-decoration: none;
+}
 
 
+.tituloMiCarrito{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2%;
+}
 
 /*Carrito Vacio*/
 .textCarritoVacio{
   text-transform: uppercase;
   text-align: center;
-  
+  margin-top: 2%;
 }
 
 .imagenFlecha{
   height: 35px;
-  margin-right: 1%;
+  margin-left: 4%;
+  
 }
 
 .imagenCarritoVacio{
   margin-left: 43%;
   margin-top: 8%;
+}
+
+
+
+/*Finalizar Compra*/
+.titulo{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2%;
+
+  
+}
+
+.tituloSecundario{
+  margin-left: 1%;
+}
+
+.btnVolverFinCompra{
+  margin-left: 2px;
+ 
 }

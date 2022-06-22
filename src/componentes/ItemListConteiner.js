@@ -2,17 +2,16 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
-
 import { useParams } from "react-router-dom";
 import db from '../utils/firebaseConfig'
 import { collection, getDocs, query, where, getFirestore, orderBy } from "firebase/firestore";
-import { async } from "@firebase/util";
+
 
 
 const ItemListConteiner = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [cargando, setCargando] = useState(false);
-  const { id} = useParams();
+  const { id } = useParams();
   
   useEffect(() => {
     const db = getFirestore();
@@ -32,7 +31,7 @@ const ItemListConteiner = () => {
         setCargando(false)    
       };
     firebaseFetch ();
-  }, [IDBVersionChangeEvent]);
+  }, [id]);
 
   return (
     <>

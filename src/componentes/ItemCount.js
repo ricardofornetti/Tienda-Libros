@@ -31,9 +31,9 @@ const ItemCount = ({ stock, onAdd, contador, setContador }) => {
       <button type="button" className="btn btn-primary btnContador">{contador}</button>
       <button onClick={sumarProdructo} type="button btnSumar" className="btn btn-primary">+</button>
       {stock ? (
-        <button type="button" className="btn btn-secondary btnComprar" onClick={onAdd}>Agregar a Carrito</button>
+        <button type="button" className="btn btn-dark btnComprar" onClick={onAdd}>Agregar a Carrito</button>
       ) : (
-        <button type="button" className="btn btn-secondary btnComprar">Comprar</button>
+        <button type="button" className="btn btn-dark btnComprar">Comprar</button>
       )}
     </div>
   );
