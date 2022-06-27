@@ -1,15 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { collection, getFirestore, addDoc } from "firebase/firestore";
+import { collection, getFirestore, addDoc, updateDoc, increment, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import arrowLeft from 'bootstrap-icons/icons/arrow-left-circle-fill.svg'
+import { async } from "@firebase/util";
+import db from '../utils/firebaseConfig';
+
 
 
 const FinalizarCompra = () => {
   const {carrito, emptyCart, costoTotalItem, quantityCart,} = useCart();
 
-  const [idCompra, setIdCompra] = useState("");
+  const [idCompra, setIdCompra] = useState(false);
 
   const [modal, setModal] = useState(false);
   const [buyer, setBuyer] = useState({
@@ -34,6 +37,7 @@ const FinalizarCompra = () => {
     };
 
     saveToFirestore(order);
+    modifyQuantity();
   };
 
   const saveToFirestore = (order) => {
@@ -42,16 +46,30 @@ const FinalizarCompra = () => {
 
     addDoc(orderCollection, order).then((data) => {
       setIdCompra(data.id);
+      {emptyCart()}
     });
   };
 
+
+
+    const modifyQuantity = async (item) => {
+      const modifyQuantity = doc(db, "products", item.id);
+      await updateDoc(modifyQuantity, {
+        stock: increment(-item.quantity),
+      });
+    };
+    
+  
+
   return (
+    <>
+    {!idCompra ?
     <>
     <h2 className="titulo">resumen de compra</h2>
     <h4 className="tituloSecundario">Estos son los productos en tu carrito</h4>
     
       <table className="table table-hover table-dark table-sm caption-top bordered">
-        <label></label>
+        
         <thead>
           <tr>
             <th>Cantidad de Articulos</th>
@@ -144,9 +162,11 @@ const FinalizarCompra = () => {
           />
         )}
       </div>
+    </>
+    
 
-      {/* Contenedor modal final */}
-      <div className={`${modal ? "flex" : "hidden"}`}>
+      //modal Compra
+      :<div className={`${modal ? "flex" : "hidden"}`}>
         <h2> ¡Muchas gracias por tu compra {buyer.name.toUpperCase()} </h2>
         <p>
           Te enviaremos un e-mail a {buyer.email.toLowerCase()} con tu orden de
@@ -155,10 +175,10 @@ const FinalizarCompra = () => {
 
         <img className="imagenFlecha" src={arrowLeft} alt="imagen flecha"></img>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <button onClick={emptyCart} type="button" className="btn btn-dark btnVolverFinCompra">Volver al Inicio...</button>
+          <button  type="button" className="btn btn-dark btnVolverFinCompra">Volver al Inicio...</button>
         </Link>
         
-      </div>
+      </div>}
     </>
   );
 };

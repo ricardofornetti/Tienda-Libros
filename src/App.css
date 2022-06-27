@@ -273,12 +273,20 @@
 }
 
 
-/*Cart*/
+
 .imagenCart{
-  width: 15%;
-  height: 5%;
-  margin-top: 1%;
-  margin-left: 1%;
+  width:80%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-bottom: 5%;
+  
+}
+
+.resumenCart{
+  margin-left: 100px;
+  
+  text-transform: uppercase;
 }
 
 .btnVaciarCarrito{
@@ -298,6 +306,7 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 /*Carrito Vacio*/
@@ -325,8 +334,6 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 2%;
-
-  
 }
 
 .tituloSecundario{
@@ -337,3 +344,48 @@
   margin-left: 2px;
  
 }
+
+
+
+/*cartItem*/
+.cartItem{
+  display: grid;
+  grid-template-columns: 0.5fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; } 
+
+.tituloCartItem{
+  text-align:left;
+  color: black;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight:bold ;
+  margin-bottom: 3%;
+}
+
+.descripcionCartItem{
+  margin-bottom: 3%;
+  text-align:left;
+  font-size: 20px;
+}
+
+.imagenBorrarCartItem{
+  margin-left: 3%;
+  margin-top: 10%;
+}
+
+.imagenBorrarCartItem1{
+ margin-left: 3%;
+  margin-top: 10%;
+}
+
+.btnCartItem{
+  margin-left: 1%;
+  margin-top: 10%;
+}
+

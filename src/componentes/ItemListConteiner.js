@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import db from '../utils/firebaseConfig'
-import { collection, getDocs, query, where, getFirestore, orderBy } from "firebase/firestore";
+import { collection, getDocs, query, where} from "firebase/firestore";
 
 
 
@@ -12,26 +12,36 @@ const ItemListConteiner = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [cargando, setCargando] = useState(false);
   const { id } = useParams();
-  
-  useEffect(() => {
-    const db = getFirestore();
-    const firebaseFetch = async () => {
-      setCargando(true);
-      const myItem = id
-        ? query(collection(db, "products"), where("category", "==", id))
-        :query(collection (db, 'products'), orderBy('titulo'))
 
-        const querySnapshot = await getDocs(myItem)
-        setListaProductos(
-            querySnapshot.docs.map((item) => {
-                return { ...item.data(), id: item.id }
-                
-            })
-        )  
-        setCargando(false)    
-      };
-    firebaseFetch ();
-  }, [id]);
+  
+  
+ 
+    
+    const firebaseFetch = async () => {
+      let productCollection;
+      if (!id) {
+        productCollection = query(collection(db, "products"));
+      } else {
+        productCollection = query(
+          collection(db, "products"),
+          where("category", "==", Number(id))
+        );
+      }
+      const querySnapshot = await getDocs(productCollection);
+      const dataFirebase = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return dataFirebase;
+    };
+
+    useEffect(() => {
+      setCargando(true);
+      firebaseFetch()
+        .then((res) => setListaProductos(res))
+        .catch((error) => console.log(error))
+        .finally(() => setCargando(false));
+    }, [id]);
 
   return (
     <>

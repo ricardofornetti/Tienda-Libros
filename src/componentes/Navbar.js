@@ -28,12 +28,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/category/01'style={{textDecoration:'none'}}>
+                  <Link to='/category/1'style={{textDecoration:'none'}}>
                     <label className="nav-link active" >libros</label>
                   </Link>  
                 </li>
                 <li className="nav-item">
-                  <Link to='/category/03'style={{textDecoration:'none'}}>
+                  <Link to='/category/3'style={{textDecoration:'none'}}>
                     <label className="nav-link active" >peliculas</label>
                   </Link>
                 </li>
