@@ -13,7 +13,7 @@
 
 * **Desarrollado por la estudiante:** Ricardo Fornetti
 
-* **Proyecto final:** https://proyecto-tienda-react-jimenacambronero.vercel.app/
+* **Proyecto final:** 
 
 ### Librerías y frameworks
 
