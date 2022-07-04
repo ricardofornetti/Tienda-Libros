@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCart } from "../context/CartContext";
 import borrar from 'bootstrap-icons/icons/trash-fill.svg'
+import agregar from 'bootstrap-icons/icons/plus-square-fill.svg'
 import { Link } from 'react-router-dom';
 
 
@@ -21,23 +22,21 @@ const CartItem = ({item}) => {
           <p className='descripcionCartItem'>Subtotal: $ {cantidad * precio}</p>
 
           <img onClick={()=>{remove(id)}} className='imagenBorrarCartItem' src={borrar} alt="imagen Borrar"></img>
-          <button onClick={()=>{remove(id)}} type="button" className="btn btn-dark btnCartItem">Eliminar Producto</button>
-          
-          <img onClick={()=>{emptyCart()}} className='imagenBorrarCartItem1' src={borrar} alt="imagen Borrar"></img>
-          <Link to="/"><button type="button" className="btn btn-dark btnCartItem">Agregar Producto</button></Link>
+          <button onClick={()=>{remove(id)}} type="button" className="btn btn-dark btnCartItem btn-sm">Eliminar Producto</button>
 
           <img onClick={()=>{emptyCart()}} className='imagenBorrarCartItem1' src={borrar} alt="imagen Borrar"></img>
-          <button onClick={()=>{emptyCart()}} type="button" className="btn btn-dark btnCartItem">Vaciar Carrito</button>   
-        </div>
-        <div className="div3"> 
+          <button onClick={()=>{emptyCart()}} type="button" className="btn btn-dark btnCartItem btn-sm">Vaciar Carrito</button>
+
+          <Link to="/"><img className='imagenBorrarCartItem1' src={agregar} alt="imagen Borrar"></img></Link>
           
-        </div> 
+          <Link to="/"><button type="button" className="btn btn-dark btnCartItem btn-sm">Agregar Producto</button></Link>   
+        </div>
+        <div className="div3"></div> 
       </div> 
     </>
   )
 }
 
 export default CartItem;
-
 
 

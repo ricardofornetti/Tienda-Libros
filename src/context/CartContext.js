@@ -55,12 +55,7 @@ export const CartProvider = ({ children }) => {
   const sumaTotal = () =>{
     return costoTotalItem() * 1.21;
   }
-
   
-
-
-
-
   return (
     <CartContext.Provider value={{ 
       carrito, 

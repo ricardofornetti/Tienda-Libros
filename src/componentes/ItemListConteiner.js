@@ -12,11 +12,7 @@ const ItemListConteiner = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [cargando, setCargando] = useState(false);
   const { id } = useParams();
-
   
-  
- 
-    
     const firebaseFetch = async () => {
       let productCollection;
       if (!id) {

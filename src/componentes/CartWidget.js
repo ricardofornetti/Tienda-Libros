@@ -25,6 +25,3 @@ const CartWidget = () => {
 export default CartWidget;
 
 
-/**<Link to='/cart'>
-        <img className='imagenCarrito' src={cartIcon} alt="imagen carrito"></img>
-        </Link> */

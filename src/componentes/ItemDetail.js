@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import swal from 'sweetalert';
 
 const ItemDetail = ({ item }) => {
   const { id, titulo, autor, img, precio, stock } = item;
   const [contador, setContador] = useState(0);
   const [itemCount, setItemCount] = useState(false);
+
+  const mostrarAlerta = () => {
+    swal({
+      title:"FELICITACIONES!!!",
+      text: " Agregaste " + contador + " uidades al carrito",
+      icon: "success",
+      button: "Aceptar",
+      timer:"3000"
+    })
+  }
 
   const { addToCart } = useCart();
 
@@ -20,7 +32,9 @@ const ItemDetail = ({ item }) => {
       stock,
       cantidad: contador,
     };
-    alert("AGREGASTE : " + contador + " UNIDADES AL CARRITO");
+    
+
+    mostrarAlerta()
     setItemCount(true);
     // agrego el producto seleccionado al carrito
     addToCart(itemCart);
@@ -78,3 +92,5 @@ const ItemDetail = ({ item }) => {
   );
 };
 export default ItemDetail;
+
+

@@ -16,13 +16,6 @@ const Item = ({ producto }) => {
       </div>
     </div>
     </div>
-   
-      
-      
-    
-    
-
-     
   );
 };
 
@@ -30,17 +23,4 @@ export default Item;
 
 
 
- /*
-<div className="card mb-3" style={{ width: "15rem" }}>
-      <Link to={`/item/${id}`} style={{ textDecoration: "none" }}>
-            <h5 className="card-textTitulo">{titulo}</h5>*
-          </Link>
-        <Link to={`/item/${id}`}><img src={img} className="imagenLibro img-fluid rounded-start"alt="imagen libro"/></Link>
-        <Link to={`/item/${id}`}><button type="button" className="btn btn-danger btn-sm">Detalles</button></Link>
-        
-      </div>
-      <div>
-      
-
-      </div>
-     */
+ 

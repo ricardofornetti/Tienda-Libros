@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logoLibreria from '../imagenes/logoLibreria.png';
+import libreria from '../imagenes/libreria.jpg';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="container-fluid">
             <label className="navbar-brand">
               <Link to ='/' className='linkImg'> {/*Linkeo al brand */}
-              <img className="imagenLogo" src={logoLibreria} alt="logo Libreria"></img>
+              <img className="imagenLogo" src={libreria} alt="logo Libreria"></img>
               </Link>
             </label>
             <button
