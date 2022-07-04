@@ -33,8 +33,8 @@ La configuración de firebase esta en variables de entorno. Para correrlo localm
 
 ## Contacto
 
-* **LinkedIn:** https://www.linkedin.com/in/jimenacambronero/
-* **GitHub:** https://github.com/JimenaCambronero
+* **LinkedIn:** www.linkedin.com/in/ricardofornetti
+* **GitHub:** https://github.com/ricardofornetti
 
 
 ## Documentación de React
@@ -43,5 +43,4 @@ Acceder a [Create React App Documentation](https://create-react-app.dev/docs/get
 
 [React documentation.](https://reactjs.org/)
 
-**Si te gustó, haz clic en la ⭐️ botón y corre la voz 🦄 👩‍💻**
-**Muchas gracias y Saludos! Jimena**
+
