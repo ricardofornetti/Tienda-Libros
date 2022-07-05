@@ -11,7 +11,7 @@
 
 * **Tutor:** Valentina Marenda
 
-* **Desarrollado por la estudiante:** Ricardo Fornetti
+* **Desarrollado por el estudiante:** Ricardo Fornetti
 
 * **Proyecto final:** 
 
